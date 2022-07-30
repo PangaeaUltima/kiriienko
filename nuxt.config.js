@@ -21,7 +21,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+    link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -53,19 +53,21 @@ export default {
       themes: {
         light: {
           primary: '#d4ecef',
-          'primary-font': '#384753',
+          'primary-font': '#0e0e10',
         },
         dark: {
-          primary: '#a8f7fd',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-          'primary-font': '#323d40',
-          'dark-jungle-green': '#1c2024',
-          cinder: '#242b30',
+          primary: '#e0fdcd',
+          'primary-font-light': '#F4F3EC',
+          'primary-font-dark': '#0e0e10',
+          'primary-black': '#1C1D21',
+          'secondary-black': '#17171a',
+          'deep-black': '#141414',
         },
       },
     },

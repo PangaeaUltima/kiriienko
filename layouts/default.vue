@@ -2,7 +2,8 @@
 app-layout
   .d-flex.flex-grow-1
     app-side-menu
-    nuxt
+    .w-100
+      nuxt
 </template>
 
 <script>

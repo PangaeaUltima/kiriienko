@@ -1,5 +1,5 @@
 <template lang="pug">
-.flex-grow-1.wrapper
+.flex-grow-1.wrapper.px-16
   component.section(
     v-for="section in sections"
     :key="section.id"

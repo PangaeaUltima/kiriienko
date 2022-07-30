@@ -1,12 +1,12 @@
 <template lang="pug">
 .side-menu
-  .d-flex.flex-column.pa-3
+  .d-flex.flex-column.pa-3.deep-black
     .logo-wrapper
       logo-svg
     span.text-h3.text-center.mb-2 Ruslan
     span.text-center.text-caption Web Developer
-  .d-flex.flex-column.justify-center
-    v-list.dark-jungle-green.pa-0(nav dense flat)
+  .d-flex.flex-column.justify-center.secondary-black
+    v-list.pa-0.secondary-black(nav dense flat)
       v-list-item-group(color="primary")
         v-divider
         .d-flex.flex-column(v-for="item in sections" :key="item.id")
@@ -15,9 +15,9 @@
             @click="setSection(item)"
           )
             v-list-item-content.text-center.text-body 
-              span {{ item.name }}
+              span.text-alt {{ item.name }}
           v-divider
-  .d-flex.align-end.justify-space-between.pa-3
+  .d-flex.align-end.justify-space-between.pa-3.secondary-black
     v-btn(
       v-for="item in social"
       :key="item.id"
@@ -74,9 +74,8 @@ export default {
 .side-menu {
   height: 100%;
   width: 140px;
-  background: #1c2024;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 1fr;
   .logo-wrapper {
     svg {
       width: 116px;

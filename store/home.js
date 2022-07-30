@@ -3,21 +3,26 @@ export const state = () => ({
   sections: [
     {
       id: 0,
+      component: 'home-hero',
+      name: 'Greetings',
+    },
+    {
+      id: 1,
       component: 'home-about',
       name: 'About Me',
     },
     {
-      id: 1,
+      id: 2,
       component: 'home-skills',
       name: 'My Skills',
     },
     {
-      id: 2,
+      id: 3,
       component: 'home-work',
       name: 'Work',
     },
     {
-      id: 3,
+      id: 4,
       component: 'home-contact',
       name: 'Contact',
     },
