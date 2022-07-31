@@ -2,13 +2,9 @@
 section.fullscreen-page.w-100.d-flex.align-center
   .d-flex.flex-column.align-start
     h1.text-h1.mb-4.headline
-      span Hi,
-      span I'm
-        .relative.ml-6
-          span Ruslan,
-          span.glitch.glitch-primary Ruslan
-          span.glitch.glitch-red Ruslan
-      | web developer
+      .d-flex.align-center(v-for="(row, index) in title" :key="index")
+        v-hover(v-for="(el, index) in row" :key="index" v-slot="{ hover }" :close-delay="700")
+          span(:class="{ 'mx-3': el === ' ', 'squeeze-animation primary--text': hover }") {{ el }}
     .d-flex.align-center.text-h3.text--disabled.mb-8
       span < Front-End Developer
       span.mx-3 /
@@ -29,29 +25,11 @@ export default {
   components: {
     AppGlitchButton,
   },
+  computed: {
+    title() {
+      const text = ['Hi,', "I'm Ruslan,", 'web developer']
+      return text.map((item) => item.split(''))
+    },
+  },
 }
 </script>
-
-<style lang="scss" scoped>
-.headline {
-  .glitch {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .glitch-main {
-    animation: glitchMain 8s infinite;
-  }
-  .glitch-primary {
-    color: $primary;
-    animation: glitchPrimary 8s infinite;
-  }
-  .glitch-red {
-    color: $light-red;
-    animation: glitchRed 8s infinite;
-  }
-  span {
-    display: flex;
-  }
-}
-</style>
