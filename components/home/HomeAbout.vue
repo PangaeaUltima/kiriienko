@@ -12,7 +12,7 @@ section.fullscreen-page.w-100.d-flex.align-center
           )
             span(:class="{ 'mx-3': el === ' ', 'squeeze-animation': hover }") {{ el }}
       p I'm Front-End developer from Ukraine. Started studying web development in my last year of university in 2020.
-      p Quite punctual, responsible and creative person. I like video games, outdoor activities, TV series / movies, and travels.
+      p Quite punctual, responsible and creative guy. I like video games, outdoor activities, TV series / movies, and travels.
       p.mb-0 Interested in gaining new experience in development area and improvement English skills.
 </template>
 
