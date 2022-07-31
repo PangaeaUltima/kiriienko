@@ -68,6 +68,7 @@ export default {
           'primary-black': '#1C1D21',
           'secondary-black': '#17171a',
           'deep-black': '#141414',
+          'light-red': '#f16f6f',
         },
       },
     },

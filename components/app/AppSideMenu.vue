@@ -3,7 +3,7 @@
   .d-flex.flex-column.pa-3.deep-black
     .logo-wrapper
       logo-svg
-    span.text-h3.text-center.mb-2 Ruslan
+    span.text-h3.text-center.mb-2.font-weight-bold Ruslan
     span.text-center.text-caption Web Developer
   .d-flex.flex-column.justify-center.secondary-black
     v-list.pa-0.secondary-black(nav dense flat)
@@ -12,7 +12,7 @@
         .d-flex.flex-column(v-for="item in sections" :key="item.id")
           v-list-item.mb-0.py-2(
             :class="{ 'v-list-item--active': item.id === activeSection }"
-            @click="setSection(item)"
+            @click="setSection(item.id)"
           )
             v-list-item-content.text-center.text-body 
               span.text-alt {{ item.name }}
@@ -32,7 +32,7 @@
 <script>
 import { mapState } from 'vuex'
 import LogoSvg from '@/assets/img/logo.svg?inline'
-
+import { SOCIAL } from '~/helpers/const'
 export default {
   name: 'AppSideMenu',
   components: {
@@ -40,31 +40,15 @@ export default {
   },
   data() {
     return {
-      social: [
-        {
-          id: 1,
-          link: 'https://www.linkedin.com/in/edgeofuniverse/',
-          icon: 'mdi-linkedin',
-        },
-        {
-          id: 2,
-          link: 'https://t.me/live_fast_die_young',
-          icon: 'mdi-send',
-        },
-        {
-          id: 3,
-          link: 'https://www.instagram.com/edge_of_universe/',
-          icon: 'mdi-instagram',
-        },
-      ],
+      social: SOCIAL,
     }
   },
   computed: {
     ...mapState('home', ['activeSection', 'sections']),
   },
   methods: {
-    setSection(section) {
-      this.$store.dispatch('home/setSection', section.id)
+    setSection(id) {
+      this.$store.dispatch('home/setSection', id)
     },
   },
 }
